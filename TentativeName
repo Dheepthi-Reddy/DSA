@@ -1,0 +1,13 @@
+***This file has all random questions I think of or mistakes I make while learning, learn from mistakes they say...!***
+
+can we print garbage value in python for a array?
+ChatGPT said:
+Good question — and a classic one from C/C++ mindset! 😄
+
+❓ Can we print garbage values in Python arrays?
+❌ No, not really.
+In Python, you won’t get garbage values like in C/C++ because:
+
+Python initializes variables explicitly.
+There's no concept of uninitialized memory being exposed directly.
+If you try to access an element in a list that doesn't exist, Python throws an error — not garbage.
