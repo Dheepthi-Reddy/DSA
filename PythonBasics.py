@@ -145,3 +145,239 @@ Enter day of the week:
 Tuesday
 '''
 
+# *Arrays*
+# Similar data types 
+# 8.
+nums = ["5", "4", "2", "6", "7"]
+print(nums)
+
+'''
+O/P:
+['5', '4', '2', '6', '7']
+'''
+
+# *2D-Arrays*
+# 9.
+nums = [["5", "4", "2"], ["6", "7", "2"], ["4", "2", "6"]]
+print(nums)
+nums[1][2] = 9
+print(nums)
+
+'''
+O/P:
+[['5', '4', '2'], ['6', '7', '2'], ['4', '2', '6']]
+[['5', '4', '2'], ['6', '7', 9], ['4', '2', '6']]
+'''
+
+# *Strings*
+# 10.
+s = "Dheepthi"
+print(s[4])
+print(len(s))       # size of the string
+print(s[len(s)-1])  # printing last letter of the string
+
+t = 's'
+s = s+t
+print(s) 
+
+'''
+O/P:
+p
+8
+i
+Dheepthis
+'''
+
+# *For Loops*
+# 11.
+for i in range(5):
+    print(i)
+print("===")    
+for i in range(0,4):
+    print(i)
+print("===")    
+for i in range(0,7,2):
+    print(i)
+
+'''
+O/P:
+0
+1
+2
+3
+4
+===
+0
+1
+2
+3
+===
+0
+2
+4
+6
+'''
+
+# for array
+# 12.
+print("====Looping through string====")
+for i in "fruits":
+    print(i)
+
+print("====Array====")
+
+fruits = ["apple", "banana", "cherry"]
+
+for i in fruits:
+    print(i)
+
+print("====Array with break====")
+for i in fruits:
+    print(i)
+    if(i == "banana"):
+        break
+
+print("====")    
+for i in fruits:
+    if(i == "banana"):
+        break   #stops iterateing after break
+    print(i)
+    
+print("====Array with continue====")
+for i in fruits:
+    print(i)
+    if(i == "banana"):
+        continue
+
+print("====")    
+
+for i in fruits:
+    if(i == "banana"):
+        continue #stops for current iteration and continues
+    print(i)
+
+'''
+O/P:
+====Looping through string====
+f
+r
+u
+i
+t
+s
+====Array====
+apple
+banana
+cherry
+====Array with break====
+apple
+banana
+====
+apple
+====Array with continue====
+apple
+banana
+cherry
+====
+apple
+cherry
+'''
+
+# *While Loops*
+# 13.
+i = 0
+
+while(i<6):
+    print(i)
+    i += 1
+
+print("===")
+i = 0
+while(i<6):
+    i += 1
+    print(i)
+
+print("===continue")
+i = 0
+while(i<6):
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+
+print("===break")
+i = 0
+while(i<6):
+    i += 1
+    if i == 3:
+        break
+    print(i)
+    
+'''
+O/P:
+0
+1
+2
+3
+4
+5
+===
+1
+2
+3
+4
+5
+6
+===continue
+1
+2
+4
+5
+6
+===break
+1
+2
+'''
+
+# *Functions*
+'''
+A set of code which performs something for you
+Used to modularise code
+Used to increase readability
+Code reusability
+
+Types:
+void
+return
+parameterised
+non parameterised
+'''
+# 14.
+print("====Void functions====")
+def myName():
+    print("Dheepthi")
+    
+myName()
+
+print("====Void Parameterised function====")
+def myNameInput(name):
+    print("Hey", name)
+
+print("enter your name to greet...")
+name = input()
+myNameInput(name)
+
+'''
+O/P:
+====Void functions====
+Dheepthi
+====Void Parameterised function====
+enter your name to greet...
+reddy
+Hey reddy
+'''
+
+
+
+
+
