@@ -20,6 +20,7 @@ class Solution:
         return actualNum == revNum
 
 '''
+O/P:
 
 121 - true
 -121 - false
