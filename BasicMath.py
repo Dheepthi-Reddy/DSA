@@ -86,3 +86,36 @@ O/P:
 20
 
 '''
+
+
+'''
+
+With the help of Eclidean algorithm, when n1 > n2:
+
+GCD(n1, n2) = GCD(n1 - n2, n2)
+
+and,
+
+GCD(n1, n2) = GCD(n1 % n2, n2)
+
+'''
+def findHCF(n1, n2):
+    while n1 > 0 and n2 > 0:
+        if n1 > n2:
+            n1 = n1 % n2
+        else:
+            n2 = n2 % n1
+    if n1 == 0:
+        print(n2)
+    else:
+        print(n1)
+
+findHCF(52, 10)
+
+'''
+
+O/p:
+
+2
+
+'''
