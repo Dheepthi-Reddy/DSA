@@ -38,7 +38,7 @@ O/P:
 
 153 - true
 
-123 - falase
+123 - false
 
 2 - true
 
