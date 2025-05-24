@@ -163,4 +163,25 @@ print(sol.sumOfNnumbers(5))
 O/P:
 
 15
+
+Factorial of a number with Functional recursion:
+
+In multiplication problems we have to return 1, else there is a chance of whole solution to become 0.
+
+'''
+
+class Solution:
+    def sumOfNnumbers(self, n):
+        if n == 0:
+            return 1
+        return n * self.sumOfNnumbers(n - 1)
+
+sol = Solution()
+print(sol.sumOfNnumbers(5))
+
+'''
+O/P:
+
+120
+
 '''
