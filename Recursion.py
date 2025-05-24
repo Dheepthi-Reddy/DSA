@@ -1,5 +1,5 @@
 '''
-RECURSION:
+*** RECURSION: ***
 
 When a function calls itself
 Until a specified condition is met
@@ -123,4 +123,44 @@ sol.printNto1_Backtracking(1,5)
 O/P:
 
 5 4 3 2 1 
+
+*** Parameterized Recursion:
+
+we changed and printed the parameter here.
+'''
+
+class Solution:
+    def sumOfNnumbers(self, i, sum):
+        if i < 1:
+            print(sum)
+            return
+        self.sumOfNnumbers(i-1, sum+i)
+
+sol = Solution()
+sol.sumOfNnumbers(5,0)
+
+'''
+O/P:
+
+15
+
+*** Functional Recursion:
+
+Here we don't want the parameter to do the work, we want the function to return thevalue using parameter rather than the parameter.
+
+'''
+
+class Solution:
+    def sumOfNnumbers(self, n):
+        if n == 0:
+            return 0
+        return n + self.sumOfNnumbers(n - 1)
+
+sol = Solution()
+print(sol.sumOfNnumbers(5))
+
+'''
+O/P:
+
+15
 '''
