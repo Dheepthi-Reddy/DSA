@@ -184,4 +184,27 @@ O/P:
 
 120
 
+Reverse of an array using Recursion:
+
+'''
+
+class Solution:
+    def printArray(self, arr, n):
+        for i in range(n):
+            print(arr[i], end = " ")
+    
+    def reverseArray(self, arr, first, last):
+        if first < last:
+            arr[first], arr[last] = arr[last], arr[first]
+            self.reverseArray(arr, first + 1, last - 1)
+
+sol = Solution()
+arr = [5, 4, 3, 2, 1]
+n = len(arr)
+
+sol.reverseArray(arr, 0, n-1)
+sol.printArray(arr, n)
+
+'''
+1 2 3 4 5 
 '''
