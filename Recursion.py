@@ -15,54 +15,9 @@ when numerous calls wait in the stack segmentation happens which is called as St
 In order to prevent from segmentation we need to set a Base condition, so that the infinite rcursion stops at a point.
 
 Problems on recursion:
-1. 
+1. Print a Name 5 times
 
 '''
-
-# 1.
-
-class Solution:    
-    #Complete this function
-    def printNos(self,n):
-        #Your code here
-        if n == 0:
-            return
-        print(n, end=' ')
-        self.printNos(n-1)
-        
-
-sol = Solution()
-sol.printNos(10)
-
-'''
-O/P:
-
-10 9 8 7 6 5 4 3 2 1 
-
-'''
-
-# 2.
-
-class Solution:    
-    #Complete this function
-    def printNos(self,n):
-        #Your code here
-        if n == 0:
-            return
-        self.printNos(n-1) # Recursion, we are going deep into recursion tree before printing
-        print(n, end=' ')  # Backtracking, to print from 1-10 instead of 10-1
-
-sol = Solution()
-sol.printNos(10)
-
-'''
-O/P:
-
-1 2 3 4 5 6 7 8 9 10 
-
-'''
-
-# 3. Printing a name n-times
 
 class Solution:
     def printGfg(self, n):
@@ -76,10 +31,96 @@ class Solution:
 sol = Solution()
 sol.printGfg(5)
 
+
 '''
 
 O/P:
 
 GFG GFG GFG GFG GFG 
 
+
+2. Print linearly from 1 to N
+
+'''
+class Solution:    
+    #Complete this function
+    def print1toN(self, i, n):
+        #Your code here
+        if i > n:
+            return
+        print(i, end=' ')  
+        self.print1toN(i+1,n) 
+
+sol = Solution()
+sol.print1toN(1, 5)
+
+'''
+O/P:
+
+1 2 3 4 5 
+
+3. Print linearly from 1 to N using Backtracking
+
+f(i+1, n) -> forward recurisve function - we can not use this
+
+f(i-1, n) -> backward recurisve function
+
+'''
+
+class Solution:
+    def print1toN_Backtracking(self, i, n):
+       if i < 1:
+           return
+       self.print1toN_Backtracking(i-1, n)
+       print(i, end= " ")
+
+sol = Solution()
+sol.print1toN_Backtracking(5,5)
+
+'''
+O/P:
+
+1 2 3 4 5 
+
+4. Print from N to 1
+
+'''
+
+class Solution:
+    def printNto1(self, i, n):
+        if i < 1:
+            return
+        print(i, end = " ")
+        self.printNto1(i-1, n)
+
+sol = Solution()
+sol.printNto1(5,5)
+
+'''
+O/P:
+
+5 4 3 2 1 
+
+5. Print from N to 1 with backtracking
+
+f(i-1, n) -> forward recurisve function - we can not use this
+
+f(i+1, n) -> backward recurisve function
+
+'''
+
+class Solution:
+    def printNto1_Backtracking(self, i, n):
+        if i > n:
+            return 
+        self.printNto1_Backtracking(i+1, n)
+        print(i, end = " ")
+
+sol = Solution()
+sol.printNto1_Backtracking(1,5)
+
+'''
+O/P:
+
+5 4 3 2 1 
 '''
