@@ -206,5 +206,32 @@ sol.reverseArray(arr, 0, n-1)
 sol.printArray(arr, n)
 
 '''
+O/P:
+
 1 2 3 4 5 
+
+Palindrome of a string using Recursion:
 '''
+
+class Solution:
+    def palindrome(self, i, s):
+
+        if i >= len(s)//2:
+            return True
+        if s[i] != s[len(s) - i - 1]:
+            return False
+
+        return self.palindrome(i+1, s)
+
+sol = Solution()
+s = "madam"
+print(sol.palindrome(0, s))
+
+'''
+O/P:
+
+True
+'''
+
+
+        
