@@ -12,7 +12,8 @@ class Solution_MergeSort:
     temp = []
     left = low
     right = mid + 1
-    
+
+    # Storing the elemnts in a temp array
     while left <= mid and right <= high:
         if arr[left] <= arr[right]:
             temp.append(arr[left])
@@ -21,14 +22,17 @@ class Solution_MergeSort:
             temp.append(arr[right])
             right += 1
     
+    # if there are elements still remaining on left side
     while left <= mid:
         temp.append(arr[left])
         left += 1
     
+    # if there are elements still remaining on right side
     while right <= high:
         temp.append(arr[right])
         right += 1
-    
+
+    # moving elements from temp to arr
     for i in range(low, high + 1):
         arr[i] = temp[i - low]
     
@@ -37,9 +41,9 @@ class Solution_MergeSort:
         return
     
     mid = (low + high) // 2
-    self.mergeSort(arr, low, mid)
-    self.mergeSort(arr, mid + 1, high)
-    self.merge(arr, low, mid, high)
+    self.mergeSort(arr, low, mid)        # left half
+    self.mergeSort(arr, mid + 1, high)   # right half
+    self.merge(arr, low, mid, high)      # merging both halves
     
 
 sol = Solution_MergeSort()
