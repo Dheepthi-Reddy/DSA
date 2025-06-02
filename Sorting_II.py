@@ -57,4 +57,47 @@ O/P:
 
 Merge sort: [9, 13, 20, 24, 46, 52]
 
+Quick Sort:
+
+1. Pick a pivot element from the array and place it in its sorted place of the array
+2. Add remaining smaller elements to the left of pivot element and larger ones on the right.
+3. Repeat the steps on the left and right side for the sub arrays to the pivot element.
+
+
+'''
+
+class Solution_QuickSort:
+  def partition(self, arr, low, high):
+    pivot = arr[low]
+    i = low
+    j = high
+    
+    while i < j:
+        while i <= high - 1 and arr[i] <= pivot:
+            i += 1
+        while j >= low + 1 and arr[j] > pivot:
+            j -= 1
+        if i < j:
+            arr[i], arr[j] = arr[j], arr[i]
+    
+    arr[low], arr[j] = arr[j], arr[low]
+    return j
+    
+  def quickSort(self, arr, low, high):
+    if low < high:
+        partition_index = self.partition(arr, low, high)
+        self.quickSort(arr, low, partition_index - 1)
+        self.quickSort(arr, partition_index + 1, high)
+
+sol = Solution_QuickSort()
+arr = [13, 46, 24, 9, 52, 20, 9]
+n = len(arr)
+sol.quickSort(arr, 0, n-1)
+print("Quick Sort:", arr)
+
+'''
+O/P:
+
+Quick Sort: [9, 9, 13, 20, 24, 46, 52]
+
 '''
