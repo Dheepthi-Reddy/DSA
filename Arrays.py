@@ -86,4 +86,32 @@ O/P:
 
 Second Largest: 5
 Second Smallest 2
+
+Check if the array is sorted:
+============================
+
+By checking the adjacent elements
+
+'''
+
+class Solution:
+  def isSorted(self, nums):
+    n = len(nums)
+    count = 0
+    for i in range(1, n):
+      if nums[i] < nums[i-1]:
+        return False
+      return True
+sol = Solution()
+nums = [1, 2, 4, 7, 7, 5]
+# nums = [1, 2, 3, 4, 5]
+
+print(sol.isSorted(nums))
+
+'''
+O/P:
+
+False
+True
+
 '''
