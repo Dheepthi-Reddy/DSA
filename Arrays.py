@@ -114,4 +114,29 @@ O/P:
 False
 True
 
+Rotating an array once:
+======================
+
+Storing the first element in temp, then storing remaining elements from 0 to n-1, and placing the temp value in last element.
+'''
+
+class Solution:
+    def rotateOnce(self, nums) -> int:
+        n = len(nums)
+        temp = nums[0]
+        for i in range(n-1):
+            nums[i] = nums[i+1]
+        nums[n-1] = temp
+        return nums
+
+nums = [1, 2, 3, 4, 5, 6, 7]
+sol = Solution()
+print(sol.rotateOnce(nums))
+
+'''
+
+O/P:
+
+[2, 3, 4, 5, 6, 7, 1]
+
 '''
