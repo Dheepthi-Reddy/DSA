@@ -139,4 +139,29 @@ O/P:
 
 [2, 3, 4, 5, 6, 7, 1]
 
+Linear Search:
+==============
+
+Finding the index of first occurence of a number in the array.
+
+'''
+
+class Solution:
+    def linearSearch(self, nums) -> int:
+        for i in range(n):
+            if nums[i] == k:
+                return i
+        return -1
+
+nums = [1, 2, 3, 4, 5, 6, 7]
+k = 6
+n = len(nums)
+sol = Solution()
+print(sol.linearSearch(nums))
+
+'''
+O/P:
+
+5
+
 '''
